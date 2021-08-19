@@ -52,13 +52,7 @@ function forecast5Days(lat, long) {
   todayWeather.innerHTML = ''
   resultField.innerHTML = ''
 
-  fetch(`https://weatherbit-v1-mashape.p.rapidapi.com/forecast/daily?lat=${lat}&lon=${long}`, {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-key": "4e0b3425e8msh903c79df2ecdf1cp18a9e0jsn09271a53d459",
-      "x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com"
-    }
-  })
+  fetch(` https://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${long}&key=4976d7d995f44854815fc2157e3a2ae1`)
     .then(response => response.json())
     .then(response => {
       console.log(response);
